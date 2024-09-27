@@ -1,0 +1,26 @@
+@import "../../styles/common.scss";
+
+.home-page-main-container {
+  @include flexBox(column, 0, normal);
+
+  .app-main-heading {
+    margin-bottom: 2rem;
+  }
+
+  .page-main-heading {
+    margin-top: 8rem;
+    text-align: center;
+  }
+
+  .news-cards-list-container {
+    @include flexBox(column, 8rem);
+
+    padding: 4rem 0;
+  }
+
+  .common-button {
+    &.inverted {
+      align-self: center;
+    }
+  }
+}

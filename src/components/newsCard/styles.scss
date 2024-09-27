@@ -1,0 +1,35 @@
+@import "../../styles/common.scss";
+
+.blog-card-container {
+  @include flexBox(row, 4rem, center);
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .blog-card-image-container {
+    width: 50%;
+
+    .blog-card-image {
+      width: 100%;
+    }
+  }
+
+  .news-card-content-container {
+    @include flexBox(column, 2rem);
+
+    width: 50%;
+
+    .blog-title {
+      color: $mid-gray;
+      line-height: 2rem;
+      font-weight: 600;
+    }
+
+    .blog-posted-info {
+      font-size: 1.4rem;
+      color: $light-gray;
+      margin-bottom: 2rem;
+    }
+  }
+}

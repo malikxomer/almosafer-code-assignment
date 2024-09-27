@@ -1,0 +1,25 @@
+@import "../../styles/common.scss";
+
+.search-results {
+  list-style: none;
+
+  .search-results-link {
+    @include flexBox(row, 0 1rem, center);
+
+    .search-icon-container {
+      height: 5rem;
+      width: 5rem;
+
+      .search-icon {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+
+    .search-blog-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

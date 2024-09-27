@@ -1,0 +1,52 @@
+@import "../../styles/common.scss";
+
+.search-field-wrapper {
+  @include flexBox(row, 0, flex-start, center);
+
+  position: relative;
+
+  .search-input-field {
+    height: 5rem;
+    width: 100%;
+    outline: none;
+    border-radius: 0.8rem;
+    padding: 1rem 1.5rem;
+    border: 0.1rem solid $placeholder-gray;
+    color: $mid-gray;
+    font-size: 1.6rem;
+    transition: all 0.3s linear;
+
+    &::placeholder {
+      color: $placeholder-gray;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      transition: all 0.3s linear;
+      border-color: $primary-blue;
+    }
+  }
+
+  .input-search-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .search-results-dropdown {
+    @include custom-scrollbar(0.2rem);
+    @include flexBox(column, 2rem);
+
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    padding: 2rem 1.5rem;
+    border: 0.1rem solid $primary-blue;
+    max-height: 25rem;
+    height: fit-content;
+    overflow-y: auto;
+    background-color: $white-color;
+  }
+}

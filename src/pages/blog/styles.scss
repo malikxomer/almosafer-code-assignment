@@ -1,0 +1,48 @@
+@import "../../styles/common.scss";
+
+.blog-page-main-container {
+  @include flexBox(column);
+
+  .go-back-button {
+    font-size: 2rem;
+    width: max-content;
+    color: $primary-blue;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: $secondary-blue;
+      transition: all 0.3s linear;
+    }
+  }
+
+  .blog-header {
+    margin-top: 5rem;
+  }
+
+  .blog-main-image {
+    margin: 2rem 0;
+
+    .blog-image {
+      width: 100%;
+    }
+  }
+
+  .blog-posted-info {
+    font-size: 1.4rem;
+    color: $light-gray;
+    margin-bottom: 2rem;
+  }
+
+  .blog-paragraphs-container {
+    @include flexBox(column, 1.5rem);
+
+    color: $light-gray;
+  }
+
+  .common-button {
+    &.go-home-button {
+      margin-top: 2rem;
+      align-self: center;
+    }
+  }
+}

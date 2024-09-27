@@ -1,0 +1,45 @@
+@mixin flexBox(
+  $flex-direction: row,
+  $gap: 0,
+  $align-items: normal,
+  $justify-content: normal
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin custom-scrollbar(
+  $custom-height: 0.7rem,
+  $custom-width: 0.7rem,
+  $thumb-color: rgba(0, 0, 0, 0.2),
+  $track-color: $sea-shell-color
+) {
+  &::-webkit-scrollbar {
+    width: $custom-width;
+    height: $custom-height;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    outline: 0.1rem solid transparent;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+  }
+
+  // Moz Support
+  & {
+    scrollbar-color: $thumb-color transparent;
+    scrollbar-width: thin;
+  }
+}

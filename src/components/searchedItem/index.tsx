@@ -11,7 +11,7 @@ const SearchedItem: FC<ISearchedItemProps> = (props): JSX.Element => {
   const { title } = searchedBlog;
 
   return (
-    <li className="search-results">
+    <li date-testid="search-dropdown" className="search-results">
       <Link className="search-results-link" to={`/blog/${searchedBlog?.id}`}>
         <figure className="search-icon-container">
           <img
